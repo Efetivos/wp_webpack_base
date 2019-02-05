@@ -1,0 +1,147 @@
+@import 'alias-mixins'
+.e-white 
+	background-color: #fff
+
+.t-white 
+	color: #fff
+
+.e-black 
+	background-color: #000
+
+.t-black 
+	color: #000
+
+.e-color 
+	background-color: var(--color)
+
+.e-dark
+	background-color: var(--dark)
+
+.t-color 
+	color: var(--color)
+
+.e-gray 
+	background-color: #aaa
+
+.t-gray 
+	color: #aaa
+
+.t-100
+	font-weight: 100
+
+.t-300
+	font-weight: 300
+
+.t-400
+	font-weight: 400
+
+.t-500
+	font-weight: 500
+
+.t-700
+	font-weight: 700
+
+.t-900
+	font-weight: 900
+
+.e-flex 
+    @include flex-center
+
+.e-flex-col 
+    @include flex-center-col
+
+.e-flex-wrap 
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.e-rel 
+    position: relative
+
+.e-abs 
+    position: absolute
+
+.e-fixed 
+	position: fixed
+
+.e-wp 
+    width: 100%
+
+.e-hp 
+    height: 100%
+
+.e-85 
+    width: 85%
+
+.e-85w
+    width: 85vw
+
+.e-wvw 
+    width: 100vw
+
+
+.e-hvh 
+    height: 100vh
+
+.e-dn 
+    display: none
+
+
+.e-img-fit 
+    object-fit: cover
+
+
+.e-serif 
+    @include serif
+
+.e-sans 
+    @include sans
+
+.t-center
+	text-align: center
+
+	
+.e-hidden 
+	overflow: hidden
+
+
+.e-curp 
+	cursor: pointer
+
+
+h1 
+	@include serif
+	font-size: 24px
+	@include desk 
+		font-size: 36px
+	
+
+
+p 
+	color: #aaa
+	@include sans
+	margin-top: 25px
+	font-size: 12px
+	line-height: 22px
+	@include desk 
+		font-size: 14px
+	
+
+
+h2 
+	@include sans
+	font-weight: bold
+
+
+.e-upper 
+	text-transform: uppercase
+
+
+button 
+	@include clear
+	@include resetbtn 
+
+
+body
+	font-family: sans-serif
+	overflow-x: hidden

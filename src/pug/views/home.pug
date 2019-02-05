@@ -1,0 +1,25 @@
+extends ../index
+block title
+    <?php
+    |   //Template Name: Home
+    |?>
+
+block content
+    header
+        .box-img-header.e-wvw.e-hvh.e-hiiden.e-flex.e-rel.e-black.e-hidden
+            <?php the_post_thumbnail('large', array('class' => 'img-header e-wp e-hp e-img-fit')); ?>
+            h1.h1-header.e-abs.t-white PAGE HOME
+    
+    .content-blog.e-flex-col.e-85.e-rel.e-wvw.e-hvh
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            h1 <?php the_title(); ?>
+                a(href!="<?php the_permalink()?>") LINK PARA POSTAGEMS
+        <?php the_content(); ?>
+
+           h1 ola
+
+        
+        <?php endwhile; else: ?>
+            p <?php _e('Sorry, no posts matched your criteria.'); ?>
+        <?php endif; ?>
+    

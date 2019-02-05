@@ -1,0 +1,33 @@
+// -------------- FOOTER
+footer
+    .box-logo-footer
+        img.logo-footer(src!="<?php echo get_template_directory_uri(); ?>/images/logo-efet-branco.svg" alt="Logo Efetivos")
+
+    //- sociais
+    .ctn-sociais
+        .box-sociais
+            a(href="https://www.instagram.com/efetivos/" target="_blank") INSTAGRAM
+            .traco-sociais
+
+        .box-sociais
+            a(href="https://www.facebook.com/efetivos/" target="_blank") FACEBOOK
+            .traco-sociais
+
+        .box-sociais
+            a(href="mailto:contato@efetivos.com.br" target="_blank") EMAIL
+            .traco-sociais
+
+
+    //- dev
+    .ctn-dev
+        .box-copyright
+            p
+                span ALL COPYRIGHT
+                |  © EFETIVOS | #[span.year-js 2018]
+        
+        .box-dev
+            a(href="http://efetivos.com" target="_blank")
+                img.logo-desenvolv(src!="<?php echo get_template_directory_uri(); ?>/images/desenvolvimento_dev_branco.svg" alt="Logo Efetivos")
+                img.logo-efet(src!="<?php echo get_template_directory_uri(); ?>/images/logo-efet-branco.svg" alt="Logo Efetivos")
+
+<?php wp_footer(); ?>

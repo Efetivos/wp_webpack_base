@@ -1,0 +1,54 @@
+.box-trg-menu
+    .holder-trg-menu.e-rel.e-flex-col
+        .line-trg-menu.e-wp
+        .line-trg-menu.e-wp
+        .line-trg-menu.e-wp
+
+//- -- MENU MOB -->
+
+.menu-mob
+    .holder-menu-mob.e-flex-col.e-rel
+
+        .box-logo-menu.e-flex
+            img.logo-menu-mob(src!="<?php echo get_template_directory_uri(); ?>/images/logo-efet-branco.svg" alt="Logo Efetivos")
+
+        .box-links-mob.e-flex-col
+            a.link-menu-mob(href="#") Home
+            a.link-menu-mob(href="#") Sobre
+            a.link-menu-mob(href="#") Serviços
+            a.link-menu-mob(href="#") Galeria
+            a.link-menu-mob(href="#") Novidades
+            a.link-menu-mob(href="#") Contato
+
+            a.dev-box.e-flex.e-wvw(href="http://efetivos.com" target="_blank")
+                img.desenv-menu(src!="<?php echo get_template_directory_uri(); ?>/images/desenvolvimento_dev_branco.svg" alt="Logo Efetivos")
+                img.logo-efet-menu(src!="<?php echo get_template_directory_uri(); ?>/images/logo-efet-branco.svg" alt="Logo Efetivos")
+
+//- -- MENU MOB -->
+.ctn-search-form.e-wvw.e-hvh
+    .holder-search-form.e-hp.e-wp.e-rel.e-flex
+
+
+        .box-close-search.e-abs.e-curp
+            img.close-search(src!="<?php echo get_template_directory_uri(); ?>/images/cancel.svg")
+
+        form.form-search(role="search" method="get" action!="<?php echo home_url( '/' ); ?>")
+            input.form-control.e-wp.e-serif(type="search" autocomplete="off" placeholder="Digite a sua busca" value!="<?php echo get_search_query() ?>" name="s" title="Search")
+            input.btn-submit(type="submit" id="searchsubmit" role="search" method="get" value="ir" )
+
+
+header
+    .holder-header.e-rel
+        .box-logo-main
+            img.logo-main(src!="<?php echo get_template_directory_uri(); ?>/images/logo-efet-preto.svg" alt="Logo Efetivos")
+
+        .box-links-desk.e-flex
+            <?php $menuParameters = array (
+            |    'menu' => 'menu-desk', //nome do menu usado no Painel WP
+            |    'container'  => false,
+            |    'echo'  => false,
+            |    'items_wrap'  => '%3$s',
+            |    'depth'  => 0,
+            |);
+            |echo strip_tags(wp_nav_menu($menuParameters ), '<a>');
+            |?>
